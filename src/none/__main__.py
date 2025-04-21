@@ -1,4 +1,4 @@
-from none.cli import app
+from none.cli import main
 
 if __name__ == "__main__":
-    app()
+    main()

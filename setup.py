@@ -8,7 +8,7 @@ setup(
     install_requires=["typer[all]", "pyyaml"],
     entry_points={
         "console_scripts": [
-            "none=none.__main__:app",
+            "none=none.__main__:main",
         ]
     },
 )
