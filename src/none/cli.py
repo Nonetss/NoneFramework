@@ -3,6 +3,7 @@
 import argparse
 
 from none.commands.fastapi import fastapi
+from none.commands.sql import sql
 
 
 def main():
@@ -25,9 +26,17 @@ def main():
         help="Carpeta donde crear el proyecto (por defecto: directorio actual)",
     )
 
+    # Subcomando 'sql'
+    sql_parser = subparsers.add_parser(
+        "sql",
+        help="Genera un proyecto SQL en la carpeta actual",
+    )
+
     args = parser.parse_args()
 
     if args.command == "fastapi":
         fastapi(args.folder)
+    if args.command == "sql":
+        sql()
     else:
         parser.print_help()
