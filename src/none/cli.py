@@ -1,7 +1,8 @@
 from pathlib import Path
 
 import typer
-from utils import create_structure, load_template
+
+from none.utils import create_structure, load_template
 
 app = typer.Typer()
 
