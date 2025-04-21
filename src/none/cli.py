@@ -8,9 +8,12 @@ from none.commands.sql import sql
 
 def main():
     """
-    Generador de proyectos CLI (subcomando: fastapi).
+    Generador de proyectos CLI (subcomandos: fastapi, sql).
     """
-    parser = argparse.ArgumentParser(prog="none", description="Generador de proyectos")
+    parser = argparse.ArgumentParser(
+        prog="none",
+        description="Generador de proyectos",
+    )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     # Subcomando 'fastapi'
@@ -36,7 +39,7 @@ def main():
 
     if args.command == "fastapi":
         fastapi(args.folder)
-    if args.command == "sql":
+    elif args.command == "sql":
         sql()
     else:
         parser.print_help()
